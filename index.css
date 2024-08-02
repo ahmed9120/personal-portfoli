@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Jura:wght@300..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Epilogue", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  background-color: #f6f6f6;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #000;
+  position: fixed;
+  top: 0;
+  padding: 1.5rem 3rem;
+  z-index: 999;
+}
+
+.logo h1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 400;
+}
+
+a:hover,
+a:focus {
+  color: rgba(21, 118, 214, 1);
+}
+.list-icon {
+  display: none;
+}
+i {
+  font-size: 2rem;
+}
+
+/* //////section 1 intro///////// */
+
+.home {
+  margin-top: 10vh;
+  width: 100%;
+  height: 90vh;
+  padding: 2rem 4rem;
+}
+.home .container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.container .left,
+.container .right {
+  width: 50%;
+  height: 100%;
+}
+
+.container .left {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+.left .content .job {
+  font-weight: 600;
+  font-size: 20px;
+  padding-bottom: 2rem;
+}
+.left .content .identify {
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.container .right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ////////section 2 services/////////// */
+.services {
+  width: 100%;
+  height: auto;
+  padding: 9.25rem 8.75rem;
+}
+.service-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 15px;
+}
+.service-box {
+  width: calc((100% - 30px) / 3);
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+}
+.service-box .image {
+  width: 100%;
+  height: 50%;
+}
+
+.service-box .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.service-box .text {
+  width: 100%;
+  height: 50%;
+  text-align: center;
+  padding: 1rem;
+}
+.text h2,
+.text p {
+  padding: 1rem 0;
+  color: rgba(45, 45, 45, 1);
+}
+.text h2 {
+  font-weight: 600;
+  font-size: 27px;
+}
+/* ////////section 3 projects/////////// */
+.projects {
+  width: 100%;
+  height: auto;
+  padding: 2rem 2rem;
+}
+.projects .projects-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 15px;
+}
+.project-box {
+  width: calc((100% - 30px) / 3);
+  height: calc((100% - 15px) / 2);
+  display: flex;
+  flex-flow: column nowrap;
+}
+.project-box .image {
+  width: 100%;
+  height: 80%;
+  padding-bottom: 2rem;
+}
+.project-box .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.project-box .info {
+  width: 100%;
+  height: 20%;
+  line-height: 2rem;
+  color: rgba(45, 45, 45, 1);
+}
+.project-box .info h2 {
+  font-weight: 600;
+}
+
+/* /////////////////////////////////////////////////// */
+/* tablet */
+@media (max-width: 992px) {
+  .home {
+    padding: 1rem 1rem;
+  }
+  .left .content .identify {
+    font-size: 3.5rem;
+  }
+  /* services */
+  .services {
+    padding: 7.25rem 6.75rem;
+  }
+  .service-box .text {
+    padding: 0;
+  }
+  .services .text h2,
+  .services .text p {
+    padding: 0.5rem 0;
+  }
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .list-icon {
+    display: block;
+  }
+  nav {
+    display: none;
+  }
+  /* services */
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container .left,
+  .container .right {
+    width: 70%;
+    height: 50%;
+  }
+  .left .content .job {
+    font-size: 0.9rem;
+  }
+  .left .content .identify {
+    font-size: 3rem;
+  }
+  .container .right img {
+    object-fit: cover;
+  }
+  /* services */
+  .service-box {
+    width: calc((100% - 15px) / 2);
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+  }
+  /* project */
+  .projects .projects-container {
+    padding: 0 2rem;
+  }
+  .project-box {
+    width: calc((100% - 15px) / 2);
+    height: calc((100% - 30px) / 3);
+  }
+}
+
+/* Extra Small (xs) */
+@media (max-width: 576px) {
+  /* services */
+  .services {
+    padding: 7.25rem 6.75rem;
+  }
+  .service-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+  }
+  /* project */
+  .projects .projects-container {
+    padding: 0 2rem;
+  }
+  .project-box {
+    width: 100%;
+    height: calc((100% - 90px) / 6);
+  }
+}
+/* /////////////////////////////////////////////////// */
