@@ -47,7 +47,7 @@ a:focus {
 .list-icon {
   display: none;
 }
-i {
+.list-icon i {
   font-size: 2rem;
 }
 
@@ -230,6 +230,73 @@ i {
   flex-flow: column;
   align-items: flex-start;
 }
+/* /////////section 5 contact//////// */
+
+.contact {
+  width: 100%;
+  height: auto;
+  padding: 9.25rem 8.75rem;
+}
+.contact-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 30px;
+}
+.contact-left,
+.contact-right {
+  width: calc((100% - 30px) / 2);
+  height: 100%;
+
+  color: rgba(45, 45, 45, 1);
+}
+.contact-left .message {
+  width: 70%;
+  height: 50%;
+}
+.message h2 {
+  font-weight: 600;
+  font-size: 32px;
+  padding-bottom: 2rem;
+}
+.message p {
+  line-height: 27px;
+}
+.social i {
+  font-size: 1.5rem;
+  padding-top: 2rem;
+  padding-right: 0.5rem;
+}
+.form-group {
+  margin-bottom: 1rem;
+}
+input,
+textarea {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  font-size: 1rem;
+  color: rgba(45, 45, 45, 1);
+  background-color: #f1f1f1;
+  border: 1px solid #fffefe;
+}
+textarea {
+  height: 150px;
+}
+.submit {
+  padding-top: 1rem;
+}
+.submit a {
+  background-color: rgba(45, 45, 45, 0.886);
+  padding: 1rem 2rem;
+  color: #fff;
+}
+.submit a:hover,
+.submit a:focus {
+  background-color: rgb(45, 45, 45);
+}
+
 /* /////////////////////////////////////////////////// */
 /* tablet */
 @media (max-width: 992px) {
@@ -308,6 +375,18 @@ i {
   }
   .client-box {
     width: calc((100% - 30px) / 2);
+  }
+  /* contact */
+  .contact-container {
+    flex-direction: column;
+  }
+  .contact-left,
+  .contact-right {
+    width: 100%;
+  }
+  .contact-left .message {
+    width: 100%;
+    height: 50%;
   }
 }
 
